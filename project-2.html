@@ -1,0 +1,44 @@
+<div class="block-content">
+    <div class="project-head">
+        <h1 class="block-title">Single Project - Logo</h1>
+        <div class="tags"><span>Category : </span> Graphic</div>
+        <div class="tags"><span>Client : </span> Rahul Biswas (A writer)</div>
+        <div class="tags"><span>Completion : </span> October 2016</div>
+        <div class="tags"><span>Role : </span> Art Direction and Illustration</div>
+    </div>
+    <p class="project-description">“Astok Tatto” is used in the cover page of a book that talks about eight issues of Bangladesh. </p>
+	<div class="project-media">
+        <img src="images/portfolio/logo/Logo - Astok Tatto.png" alt="">
+    </div>
+    <div class="project-nav text-center">
+        <span class="float-left">
+            <a class="open-project" href="project-1.html">&leftarrow; Previous Project</a>
+        </span>
+        <span class="">
+            <a id="close-project" href="#"><i class="ion-grid"></i></a>
+        </span>
+        <span class="float-right">
+            <a class="open-project" href="project-3.html">Next Project &rightarrow; </a>
+        </span>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-md-12 btn-email">
+        <a class="btn lowercase">taj.sohelcse@gmail.com</a>
+    </div>
+</div>
+
+<script>
+    $('.open-project').on('click', function() {
+        var projectUrl = $(this).attr("href");
+        $('.inline-menu-container').removeClass('showx');
+        $('.content-blocks.pop').addClass('showx');
+        $('.content-blocks.pop section').load(projectUrl)
+        return false;
+    });
+    $('#close-project').on('click', function() {
+        $('.content-blocks.pop').removeClass('showx');
+        $('.inline-menu-container').addClass('showx');
+        $('.content-blocks.pop section').empty();
+    });
+</script>
